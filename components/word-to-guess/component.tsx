@@ -1,3 +1,30 @@
+import { View, StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  letterPlaceHolder: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: '.25em',
+    fontSize: '6rem',
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+    fontFamily: 'monospace',
+  },
+  bottom: { borderBottomColor: 'black', borderBottomWidth: 2 },
+});
+
+const letterStyles = (
+  guessedLetters: string[],
+  letter: string,
+  reveal: boolean
+) =>
+  StyleSheet.create({
+    charStyle: {
+      opacity: guessedLetters.includes(letter) || reveal ? 1 : 0,
+      color: !guessedLetters.includes(letter) && reveal ? 'red' : 'black',
+    },
+  });
+
 type WordToGuessProps = {
   guessedLetters: string[];
   wordToGuess: string;
@@ -10,33 +37,15 @@ function WordToGuess({
   reveal = false,
 }: WordToGuessProps) {
   return (
-    <div
-      style={{
-        display: 'flex',
-        gap: '.25em',
-        fontSize: '6rem',
-        fontWeight: 'bold',
-        textTransform: 'uppercase',
-        fontFamily: 'monospace',
-      }}
-    >
+    <View style={styles.letterPlaceHolder}>
       {wordToGuess.split('').map((letter, index) => (
-        <span style={{ borderBottom: '.1em solid black' }} key={index}>
-          <span
-            style={{
-              visibility:
-                guessedLetters.includes(letter) || reveal
-                  ? 'visible'
-                  : 'hidden',
-              color:
-                !guessedLetters.includes(letter) && reveal ? 'red' : 'black',
-            }}
-          >
+        <View style={styles.bottom} key={index}>
+          <View style={letterStyles(guessedLetters, letter, reveal).charStyle}>
             {letter}
-          </span>
-        </span>
+          </View>
+        </View>
       ))}
-    </div>
+    </View>
   );
 }
 export default WordToGuess;

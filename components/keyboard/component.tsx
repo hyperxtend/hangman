@@ -1,13 +1,12 @@
-import { View, StyleSheet, Button, Text } from 'react-native';
+import { View, StyleSheet, Button } from 'react-native';
 
 const styles = StyleSheet.create({
   board: {
     display: 'flex',
     flexDirection: 'row',
     gap: '.5rem',
-    border: '3px solid green',
     flexWrap: 'wrap',
-    height: '500px',
+    height: 100,
   },
   btn: {
     width: 50,
