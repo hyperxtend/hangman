@@ -1,0 +1,22 @@
+{
+  "files": {
+    "app.js": "/hangman/static/js/app.19b36b62.chunk.js",
+    "app.js.map": "/hangman/static/js/app.19b36b62.chunk.js.map",
+    "runtime~app.js": "/hangman/static/js/runtime~app.4c2cf8c4.js",
+    "runtime~app.js.map": "/hangman/static/js/runtime~app.4c2cf8c4.js.map",
+    "static/js/2.e57483cf.chunk.js": "/hangman/static/js/2.e57483cf.chunk.js",
+    "static/js/2.e57483cf.chunk.js.map": "/hangman/static/js/2.e57483cf.chunk.js.map",
+    "favicon-16.png": "/hangman/favicon-16.png",
+    "favicon-32.png": "/hangman/favicon-32.png",
+    "favicon.ico": "/hangman/favicon.ico",
+    "index.html": "/hangman/index.html",
+    "manifest.json": "/hangman/manifest.json",
+    "serve.json": "/hangman/serve.json",
+    "static/js/2.e57483cf.chunk.js.LICENSE.txt": "/hangman/static/js/2.e57483cf.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.4c2cf8c4.js",
+    "static/js/2.e57483cf.chunk.js",
+    "static/js/app.19b36b62.chunk.js"
+  ]
+}
